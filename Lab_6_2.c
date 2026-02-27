@@ -7,8 +7,8 @@
 
 #include <avr/io.h>
 void ADC_input(){
-	ADMUX = (1 << REFS0);
-	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS2);
+	ADMUX = 0b01100101;
+	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) | (1 << ADSC);
 }
 
 int  ADC_con(){
