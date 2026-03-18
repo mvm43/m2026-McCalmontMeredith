@@ -53,14 +53,14 @@ int main(void)
 			PORTC = 0b00011110;
 			PORTD = PORTD & 0b11111101;
 			PORTD = PORTD | 0b00000001; //Motor backward
-			OCR0A = 255; //Make Linear
+			OCR0A = ((val+1)/255); //Make Linear
 		} 
 		else if (val < 102)
 		{
 			PORTC = 0b00011101;
 			PORTD = PORTD & 0b11111101;
 			PORTD = PORTD | 0b00000001;
-			OCR0A = 50;
+			OCR0A = (val+1)/255;
 		}
 		else if (val < 153)
 		{
@@ -74,7 +74,7 @@ int main(void)
 	
 			PORTD = PORTD & 0b11111110;
 			PORTD = PORTD | 0b00000010;
-			OCR0A = 50;
+			OCR0A = ((val+1)/255);
 		}
 		else
 		{
