@@ -7,7 +7,7 @@
 
 #include <avr/io.h>
 void ADC_input(){
-	ADMUX = 0b01100101;
+	ADMUX = 0b01100000;
 	ADCSRA = (1 << ADEN) | (1 << ADPS1) | (1 << ADPS0);
 }
 
