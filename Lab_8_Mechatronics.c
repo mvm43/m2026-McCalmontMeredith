@@ -31,11 +31,11 @@ int main(void)
    {
 	   if (PORTC |= 0b11111110)//?????
 	   {
-		   step_CW();
+		   step_CW(100,2);
 		   wait(500);
-		   step_CCW();
+		   step_CCW(50,0);
 		   wait(500);
-		   step_CW();
+		   step_CW(150,1);
 	   }
    } // end main while
 
