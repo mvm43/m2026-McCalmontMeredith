@@ -31,11 +31,11 @@ int main(void)
    {
 	    while (!(PINC & (1 << PORTC0))){
 			
-			step_CW(180,2000);
+			step_CW(123,2000);
 			wait(500);
-			step_CCW(90,1000);
+			step_CCW(59,1000);
 			wait(500);
-			step_CW(270,2000);
+			step_CW(6,2000);
 		}
 
 	   
